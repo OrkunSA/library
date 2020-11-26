@@ -1,0 +1,45 @@
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBooks (20201126154445)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "books" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "author" varchar, "published" integer, "image" varchar, "category_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201126154445"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-11-26 16:15:33.016047"], ["updated_at", "2020-11-26 16:15:33.016047"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "published", "image", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "A Promised Land"], ["author", "Barrack Obama"], ["published", 2020], ["image", "https://booksforproject.s3.us-east-2.amazonaws.com/A+Promised+Land.jpg"], ["category_id", 1], ["created_at", "2020-11-26 16:15:37.660410"], ["updated_at", "2020-11-26 16:15:37.660410"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "published", "image", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "First Principles"], ["author", "Thomas E. Ricks"], ["published", 2020], ["image", "https://booksforproject.s3.us-east-2.amazonaws.com/First+Princibles+.jpg"], ["category_id", 1], ["created_at", "2020-11-26 16:15:37.663930"], ["updated_at", "2020-11-26 16:15:37.663930"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "published", "image", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Atomic Habits"], ["author", "James Clear"], ["published", 2018], ["image", "https://booksforproject.s3.us-east-2.amazonaws.com/Atomic+Habits.jpg"], ["category_id", 2], ["created_at", "2020-11-26 16:15:37.667071"], ["updated_at", "2020-11-26 16:15:37.667071"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "published", "image", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Fahrenheit 451"], ["author", "Ray Bradbury"], ["published", 2012], ["image", "https://booksforproject.s3.us-east-2.amazonaws.com/Fahrenheit+451.jpg"], ["category_id", 3], ["created_at", "2020-11-26 16:15:37.672069"], ["updated_at", "2020-11-26 16:15:37.672069"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "published", "image", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Humans"], ["author", "Brandon Stanton"], ["published", 2020], ["image", "https://booksforproject.s3.us-east-2.amazonaws.com/Humans.jpg"], ["category_id", 4], ["created_at", "2020-11-26 16:15:37.675487"], ["updated_at", "2020-11-26 16:15:37.675487"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "published", "image", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Man's Search for Meaning"], ["author", "Viktor E. Frank"], ["published", 2006], ["image", "https://booksforproject.s3.us-east-2.amazonaws.com/Man's+Search+for+Meaning+.jpg"], ["category_id", 1], ["created_at", "2020-11-26 16:15:37.678716"], ["updated_at", "2020-11-26 16:15:37.678716"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "published", "image", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Mexican Gothic"], ["author", "Silvia Moreno Garcia"], ["published", 2020], ["image", "https://booksforproject.s3.us-east-2.amazonaws.com/Mexican+Gothic.jpg"], ["category_id", 5], ["created_at", "2020-11-26 16:15:37.681745"], ["updated_at", "2020-11-26 16:15:37.681745"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "published", "image", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The 48 Laws of Power"], ["author", "Robert Greene"], ["published", 2000], ["image", "https://booksforproject.s3.us-east-2.amazonaws.com/The+48+Laws+of+Power.jpg"], ["category_id", 3], ["created_at", "2020-11-26 16:15:37.685579"], ["updated_at", "2020-11-26 16:15:37.685579"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "published", "image", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Intelligent Investor"], ["author", "Benjamin Graham"], ["published", 2006], ["image", "https://booksforproject.s3.us-east-2.amazonaws.com/The+Intelligent+Investor.jpg"], ["category_id", 6], ["created_at", "2020-11-26 16:15:37.690072"], ["updated_at", "2020-11-26 16:15:37.690072"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
