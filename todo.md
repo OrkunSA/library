@@ -1,6 +1,6 @@
-[] setup backend and front end
-[] create seed data
+[x] setup backend and front end
+[x] create seed data
 [] create a navbar
+[] fetch all the books
 [] sort by categories button
 [] add a book function
-[]
