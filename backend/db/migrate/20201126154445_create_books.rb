@@ -5,7 +5,7 @@ class CreateBooks < ActiveRecord::Migration[6.0]
       t.string :author
       t.integer :published
       t.string :image
-      t.integer :category_id
+      t.belongs_to :category, null: false, foreign_key: true
 
       t.timestamps
     end

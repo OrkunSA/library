@@ -9,7 +9,7 @@ class Books {
     }
 
     renderBooks() {
-        let container = document.getElementById("container");
+        let container = document.getElementById("book-collection");
         container.classList.add('container-div');
 
         let eachBookDiv = document.createElement('div')
@@ -37,4 +37,5 @@ class Books {
 
         return container
     }
+
 }
