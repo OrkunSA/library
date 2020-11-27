@@ -5,8 +5,7 @@ class ApiService {
         this.newBookButton = document.getElementById('new-book-btn')
         this.addBookForm = document.getElementById('book-form')
         this.formInputs = document.querySelectorAll('.input-text')
-        this.newBookButton.addEventListener('click', this.displayForm)// third event listener
-
+        this.newBookButton.addEventListener('click', this.displayForm)
     }
     //GET
     fetchBooks = () => fetch(`${this.baseURL}/books`).then(res => res.json())

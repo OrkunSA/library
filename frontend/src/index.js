@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(books => {
         books.forEach(book => {
             const newBook = new Books(book)
-            newBook.renderBooks()
+            newBook.renderBooks()   
         })
     })
 })
