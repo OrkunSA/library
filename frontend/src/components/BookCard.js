@@ -43,10 +43,16 @@ class BookCard {
         let bookPublished = document.createElement("P");
         bookPublished.innerHTML = `Published: ${this.published}`;
 
+        let deleteButton = document.createElement("BUTTON");
+        deleteButton.setAttribute = ('data-id', this.id);
+        deleteButton.setAttribute = ('class', 'delete-btn');
+        deleteButton.textContent = "DELETE"
+
         eachBookDiv.appendChild(bookImg);
         eachBookDiv.appendChild(bookTitle);
         eachBookDiv.appendChild(bookAuthor);
         eachBookDiv.appendChild(bookPublished);
+        eachBookDiv.appendChild(deleteButton);
         BookCard.bookCollection.appendChild(eachBookDiv);
     }
 }
