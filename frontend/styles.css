@@ -16,7 +16,12 @@ body {
   background: var(--mainWhite);
   font-family: "Lato", sans-serif;
 }
-
+.center {
+  text-align: center;
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
 .each-book {
   border-style: hidden;
   border-color: rgb(24, 14, 14);

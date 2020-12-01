@@ -1,7 +1,7 @@
 class BooksController < ApplicationController
     def index 
         @books = Book.all 
-        render json: @books, except: [:created_at, :updated_at]
+        render json: @books, except: [:created_at, :updated_at], include: :category
     end
 
     def create 
@@ -24,7 +24,7 @@ class BooksController < ApplicationController
     private 
 
     def book_params
-        params.require(:book).permit(:title, :author, :published, :image, :category_name)
+        params.require(:book).permit(:title, :author, :published, :image, :category_id)
     end
     
 end

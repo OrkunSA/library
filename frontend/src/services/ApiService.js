@@ -8,9 +8,13 @@ class ApiService {
         this.newBookButton.addEventListener('click', this.displayForm)
     }
     //GET
-    fetchBooks = () => fetch(`${this.baseURL}/books`).then(res => res.json())
+    fetchBooks = () => fetch(`${this.baseURL}/books`).then(res => res.json());
+
+    fetchCategories = () => fetch(`${this.baseURL}/categories`).then(res => res.json());
+    
 
     displayForm = () => {
+        debugger
         this.addBook = !this.addBook //initially set to false at the top
         if (this.addBook) {
         this.addBookForm.style.display = 'block'

@@ -19,7 +19,7 @@
         <span>ADD NEW BOOK</span>
         </button>
 
-    <div class="container mt-4" >
+    <div class="container mt-4">
         <form id="book-form">
             <div class="form-group">
                 <label for="title">Title</label>
@@ -44,12 +44,17 @@
             <input id="new-book-btn" type="submit" value="Add Book" class="btn btn-primary btn-block">
         </form>  
     </div>
+    
+    <div class="center">
+    <label for="categories"> Sort By Categories  </label>
+    </div>
 
-    <div id="book-collection">
+    <div id="book-collection" class="container-div">
         
     </div>
 
     <script src="src/services/ApiService.js"></script>
+    <script src="src/components/Categories.js"></script>
     <script src="src/components/Books.js"></script>
     <script type="text/javascript" src="src/index.js"></script>
 </body>

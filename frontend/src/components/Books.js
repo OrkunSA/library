@@ -1,16 +1,30 @@
 class Books {
-    constructor({id, title, author, published, image, categoryId}) {
+    constructor({id, title, author, published, image, category_id}) {
         this.id = id;
         this.title = title; 
         this.author = author;
         this.published = published;
         this.image = image;
-        this.categoryId = categoryId;
+        this.category_id = category_id;
+        Books.all.push(this)
+        this.renderBook() 
+    }
+    static bookURL = "http://localhost:3000/books"
+    static bookCollection = document.getElementById("book-collection")
+    
+    static all = []
+
+    get category() {
+        return Categories.all.find((cat) => cat.id == this.category_id)
     }
 
-    renderBooks() {
-        let container = document.getElementById("book-collection");
-        container.classList.add('container-div');
+    static renderByCategory(id) {
+        bookCollection.innerHTML = ``
+        const books = Books.all.filter((b) => b.category_id === id) 
+        books.forEach(book => book.renderBook())
+    }
+
+    renderBook() {
 
         let eachBookDiv = document.createElement('div')
         eachBookDiv.classList.add('each-book')
@@ -33,9 +47,6 @@ class Books {
         eachBookDiv.appendChild(bookTitle);
         eachBookDiv.appendChild(bookAuthor);
         eachBookDiv.appendChild(bookPublished);
-        container.appendChild(eachBookDiv);
-
-        return container
+        Books.bookCollection.appendChild(eachBookDiv);
     }
-
 }
