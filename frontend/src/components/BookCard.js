@@ -1,4 +1,4 @@
-class Books {
+class BookCard {
     constructor({id, title, author, published, image, category_id}) {
         this.id = id;
         this.title = title; 
@@ -6,7 +6,7 @@ class Books {
         this.published = published;
         this.image = image;
         this.category_id = category_id;
-        Books.all.push(this)
+        BookCard.all.push(this)
         this.renderBook() 
     }
     static bookURL = "http://localhost:3000/books"
@@ -15,12 +15,12 @@ class Books {
     static all = []
 
     get category() {
-        return Categories.all.find((cat) => cat.id == this.category_id)
+        return CategoryDropdown.all.find((cat) => cat.id == this.category_id)
     }
 
     static renderByCategory(id) {
         bookCollection.innerHTML = ``
-        const books = Books.all.filter((b) => b.category_id === id) 
+        const books = BookCard.all.filter((b) => b.category_id === id) 
         books.forEach(book => book.renderBook())
     }
 
@@ -47,6 +47,6 @@ class Books {
         eachBookDiv.appendChild(bookTitle);
         eachBookDiv.appendChild(bookAuthor);
         eachBookDiv.appendChild(bookPublished);
-        Books.bookCollection.appendChild(eachBookDiv);
+        BookCard.bookCollection.appendChild(eachBookDiv);
     }
 }

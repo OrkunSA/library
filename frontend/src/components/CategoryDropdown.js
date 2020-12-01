@@ -1,4 +1,4 @@
-class Categories {
+class CategoryDropdown {
     static all = []
 
     constructor(optionsArray) {
@@ -20,7 +20,7 @@ class Categories {
         option.setAttribute("id", "category-list")
         option.setAttribute("name", "select-category")
         select.append(option)
-        Categories.categoryCollection.append(select)
+        CategoryDropdown.categoryCollection.append(select)
     }
 
     renderOptions = (optionsArray) => {
@@ -36,6 +36,6 @@ class Categories {
     }
 
     handleChange = (event) => {
-            Books.renderByCategory(parseInt(event.target.value))
+            BookCard.renderByCategory(parseInt(event.target.value))
     }
 }

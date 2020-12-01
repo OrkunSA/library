@@ -47,6 +47,11 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.new-book-form {
+.book-form {
   width: 80%;
+  display: none;
+}
+
+.new-book-btn {
+  display: none;
 }
