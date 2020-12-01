@@ -19,7 +19,7 @@ class BookForm {
             image: image.value,
             category_id: category.value,
         };
-        api.createBook(data).then((book) => new Books(book));
+        api.createBook(data).then((book) => new BookCard(book));
         this.form.reset();
     }
 
