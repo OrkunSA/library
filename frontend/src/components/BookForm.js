@@ -21,6 +21,8 @@ class BookForm {
         };
         api.createBook(data).then((book) => new BookCard(book));
         this.form.reset();
+        const bookFormContainer = document.querySelector("#book-form")
+        bookFormContainer.hidden = true
     }
 
 

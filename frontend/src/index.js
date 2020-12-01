@@ -22,9 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
     newBookBtn.addEventListener("click", () => {
         addBook = !addBook;
         if(addBook) {
-            bookFormContainer.style.display = "none"
+            bookFormContainer.hidden = false;
         } else {
-            bookFormContainer.style.display = "block"
+            bookFormContainer.hidden = true;
         }
     })
 })
