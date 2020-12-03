@@ -28,4 +28,16 @@ class ApiService {
 
     //DELETE
 
+    deleteBook = (id) => {
+        const config = {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+            },
+        };
+
+        fetch(`${this.baseURL}/books/${id}`, config)
+            .then((res) => res.json())
+    }
 }

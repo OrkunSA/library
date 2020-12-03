@@ -6,6 +6,7 @@ class BookCard {
         this.published = published;
         this.image = image;
         this.category_id = category_id;
+        this.attachEventListener();
         BookCard.all.push(this)
         this.renderBook() 
     }
@@ -13,6 +14,21 @@ class BookCard {
     static bookCollection = document.getElementById("book-collection")
     
     static all = []
+
+    attachEventListener() {
+        BookCard.bookCollection.addEventListener("click", this.handleClick)
+    }
+
+    handleClick = (event) => {
+        if (event.target.className === "delete-btn"){
+        const id = event.target.dataset.id
+        api.deleteBook(id)
+        this.eachBookDiv.remove()
+        }
+
+    }
+
+
 
     get category() {
         return CategoryDropdown.all.find((cat) => cat.id == this.category_id)
@@ -27,6 +43,7 @@ class BookCard {
     renderBook() {
 
         let eachBookDiv = document.createElement('div')
+        this.eachBookDiv = eachBookDiv
         eachBookDiv.classList.add('each-book')
 
         let bookImg = document.createElement("IMG");
@@ -44,9 +61,11 @@ class BookCard {
         bookPublished.innerHTML = `Published: ${this.published}`;
 
         let deleteButton = document.createElement("BUTTON");
-        deleteButton.setAttribute = ('data-id', this.id);
-        deleteButton.setAttribute = ('class', 'delete-btn');
-        deleteButton.textContent = "DELETE"
+        this.deleteButton = deleteButton
+        deleteButton.innerHTML = 
+        `
+        <button class="delete-btn" data-id="${this.id}">Delete</button>
+        `
 
         eachBookDiv.appendChild(bookImg);
         eachBookDiv.appendChild(bookTitle);
