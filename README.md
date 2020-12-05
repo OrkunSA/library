@@ -17,7 +17,7 @@ Library is an app with a JavaScript frontend and Ruby on Rails API backend to he
 
 - To run the Rails server;
 
-`$rails s`
+` rails s`
 
 - Then navigate to frontend folder in your terminal.
 
