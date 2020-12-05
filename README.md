@@ -8,7 +8,7 @@ Library is an app with a JavaScript frontend and Ruby on Rails API backend to he
 
 - Change directory to backend in the terminal and run
 
-`$bundle install`
+`bundle install`
 
 - To set up and seed the database
 
