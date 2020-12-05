@@ -1,5 +1,4 @@
 class CategoryDropdown {
-    static all = []
 
     constructor(optionsArray) {
         this.optionsArray = optionsArray

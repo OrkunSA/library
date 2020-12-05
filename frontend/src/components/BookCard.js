@@ -10,7 +10,7 @@ class BookCard {
         BookCard.all.push(this)
         this.renderBook() 
     }
-    static bookURL = "http://localhost:3000/books"
+    
     static bookCollection = document.getElementById("book-collection")
     
     static all = []
@@ -25,13 +25,6 @@ class BookCard {
         api.deleteBook(id)
         this.eachBookDiv.remove()
         }
-
-    }
-
-
-
-    get category() {
-        return CategoryDropdown.all.find((cat) => cat.id == this.category_id)
     }
 
     static renderByCategory(id) {

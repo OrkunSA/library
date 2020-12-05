@@ -19,8 +19,6 @@ class BooksController < ApplicationController
         render json: {message: "Successfully deleted #{book.title}!"}
     end
 
-
-
     private 
 
     def book_params
