@@ -12,8 +12,8 @@ Library is an app with a JavaScript frontend and Ruby on Rails API backend to he
 
 - To set up and seed the database
 
-`$rake db:migrate`
-`$rake db:seed`
+` rake db:migrate`
+` rake db:seed`
 
 - To run the Rails server;
 
