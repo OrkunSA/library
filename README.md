@@ -36,7 +36,9 @@ Library is an app with a JavaScript frontend and Ruby on Rails API backend to he
 
 # Demo
 
-https://youtu.be/O_Qz2m-mAYM
+[![DEMO](http://img.youtube.com/vi/O_Qz2m-mAYM/0.jpg)](http://www.youtube.com/watch?v=O_Qz2m-mAYM)
+
+
 
 # Blog
 
