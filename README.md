@@ -1,3 +1,6 @@
+![Nice Reads](https://user-images.githubusercontent.com/63612622/110399162-f6ae2b00-803a-11eb-8fc3-d91767a2a78b.png)
+
+
 # Description
 
 Library is an app with a JavaScript frontend and Ruby on Rails API backend to help users to keep track of their favorite books. They can perform almost all the CRUD actions on their book collections.
@@ -30,6 +33,10 @@ Library is an app with a JavaScript frontend and Ruby on Rails API backend to he
 - Click on sort by to filter books by categories
 
 - Click on delete to remove a book from your book collection.
+
+# Demo
+
+https://youtu.be/O_Qz2m-mAYM
 
 # Contributing
 
