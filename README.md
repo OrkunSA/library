@@ -38,6 +38,10 @@ Library is an app with a JavaScript frontend and Ruby on Rails API backend to he
 
 https://youtu.be/O_Qz2m-mAYM
 
+# Blog
+
+https://orkunsalam.medium.com/another-day-another-project-nicereads-in-javascript-dbdc9867a44b
+
 # Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/OrkunSA/library.git. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
